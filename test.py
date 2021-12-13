@@ -53,7 +53,7 @@ title = """
              <h5 style = "color: #2F2523; text-align: center" > </h5>
              """
 
-option = st.sidebar.selectbox("Please select a country:", ["USA", "Australia", "Vietnam", "Denmark", "India"])
+option = st.sidebar.selectbox("Please select a country:", ["USA", "Australia", "Vietnam", "Denmark", "India","England"])
 #st.sidebar.markdown(" ")
 if option == "USA":
    st.markdown(title, unsafe_allow_html=True)
@@ -89,6 +89,13 @@ if option == "India":
    ind = founders_view.loc[founders_view["country_code"] == "IND"]
    ind = ind.drop(["country_code"], axis = 1)
    st.table(ind)
+   
+   if option == "England":
+   st.markdown(title, unsafe_allow_html=True)
+   st.text("Founders in England")
+   gbr = founders_view.loc[founders_view["country_code"] == "GBR"]
+   gbr = gbr.drop(["country_code"], axis = 1)
+   st.table(gbr)
 
 
 
