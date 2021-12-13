@@ -90,7 +90,7 @@ if option == "India":
    ind = ind.drop(["country_code"], axis = 1)
    st.table(ind)
    
-   if option == "England":
+if option == "England":
    st.markdown(title, unsafe_allow_html=True)
    st.text("Founders in England")
    gbr = founders_view.loc[founders_view["country_code"] == "GBR"]
